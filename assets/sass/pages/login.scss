@@ -1,0 +1,105 @@
+// SCSS de módulos
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
+.login, .esqueci-senha {
+    max-width: 920px;
+    width: 90%;
+    margin: 10.5rem auto;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #7E7E7E;
+
+    h2 {
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 2.4rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #41B17E;
+    }
+
+    & > p {
+        margin: 5rem auto;
+    }
+}
+
+.login {
+    &-header {
+        background: $gradient;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9rem;
+        padding: 10.3rem 3rem 6.7rem;
+    
+        h1 {
+            font-weight: 800;
+            font-size: 7.2rem;
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #41B17E;
+        }
+    
+        article {
+            font-weight: 700;
+            text-align: center;
+            color: #fff;
+    
+            h3 {
+                font-size: 3rem;
+                color: #fff;
+            }
+        
+            p {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4.1rem 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__senha {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        color: #41B17E;
+        text-decoration: underline;
+
+        appearance: none;
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+}
+
+.esqueci-senha {
+    &__whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.23rem;
+
+        max-width: 43rem;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #41B17E;
+
+        border-radius: 1rem;
+        padding: 2.1rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+    }
+}

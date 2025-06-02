@@ -1,0 +1,174 @@
+@import '../abstracts/variables';
+
+.novo-memorando, .ultimo-memorando {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.2rem auto;
+
+    h2 {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #005988;
+    }
+}
+
+.ultimo-memorando {
+    margin: 6rem auto;
+    padding: 5rem 3rem;
+    border-radius: 1.2rem;
+    background-color: $green;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    h2 {
+        color: #fff;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+hr {
+    &:has( + .novo-memorando) {
+        margin: 0 auto;
+    }
+}
+
+.modal {
+    &__heading {
+        flex-wrap: nowrap;
+        gap: 3rem;
+
+        h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            & > span {
+                padding: 1.5rem 4rem;
+
+                font-size: 2rem;
+                color: #fff;
+                background-color: #0083CA;
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    &[data-model="novo-memorando"] [data-step="2"] {
+        .modal__fields {
+            label {
+                flex: 1 0 30%;
+            }
+
+            &:has(+ .modal__fields--2.modal__fields--active) {
+                .modal__step-actions {
+                    display: none;
+                }
+            }
+
+            &--2 {
+                label {
+                    &:nth-of-type(1), &:nth-of-type(2) {
+                        flex: 1 0 40%;
+                    }
+                }
+
+                .modal__step-actions {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+
+    &__step {
+        display: none;
+        flex-direction: column;
+        gap: 4.1rem;
+        padding: 2.9rem 0;
+        border-top: .05rem solid #A7A9AC;
+    
+        &--active {
+            display: flex;
+        }
+
+        &-actions {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 3rem;
+            padding-top: 2rem;
+            border-top: .1rem solid #A7A9AC;
+        }
+    }
+
+    &__fields {
+        display: none;
+        border: none;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__content {
+        padding: 4rem 5rem;
+        background-color: #F9F9F9;
+
+        font-size: 1.8rem;
+        line-height: 3rem;
+        color: #7E7E7E;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        strong {
+            color: #41B17E;
+        }
+
+        label:has(input[type=checkbox]) {
+            flex-direction: row;
+            align-self: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+
+        .btn {
+            margin: 0;
+        }
+    }
+
+    &--success {
+        .modal__content {
+            padding: 0;
+            background: transparent;
+            max-width: 100%;
+        }
+    }
+}
+
+.table:not(:has(.dt-container)) + .modal__step-actions, .table:has(.dt-empty) + .modal__step-actions {
+    display: none;
+}
+
+[data-function="remove-item"] {
+    cursor: pointer;
+}

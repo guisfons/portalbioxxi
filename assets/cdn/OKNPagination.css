@@ -1,0 +1,144 @@
+/* @info The original architecture has been modified to apply to the output of the WP's function the_posts_pagination() */
+/*
+.okn-pagination-container {
+    margin: 30px auto 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid #efefef;
+}
+.okn-pagination-container .pagination {
+    display: block;
+    list-style: none;
+    text-align: left;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+}
+.pagination .screen-reader-text { display: none; }
+.okn-pagination--centered {
+	text-align: center;
+}*/
+.okn-pagination-container {
+	margin-top: 60px;
+}
+
+.okn-pagination-container .pagination .nav-links {
+    display: flex;
+    align-items: flex-end;
+   justify-content: center;
+}
+/*
+.okn-pagination a i {
+	font-size: 1.2rem;
+	line-height: 1;
+}
+.okn-pagination .disabled a,
+.okn-pagination disabled a {
+    cursor: not-allowed;
+    background: #cecece !important;
+    color: #212121 !important;
+}
+*/
+.okn-pagination-container .pagination .nav-links .page-numbers {
+	/*display: block;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+
+	font-size: 1.2em;
+	padding: .8em 0;
+
+	background : #262626;
+	color      : #f2f2f2;*/
+	/* margin     : 0 0.2em; */
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);*/
+}
+/*
+
+.okn-pagination-container .pagination .nav-links .page-numbers {
+    width: 36px;
+    border-radius: 50%;
+    background: #efefef;
+    padding: 10px;
+    line-height: 1;
+}
+
+.okn-pagination-container .pagination .nav-links .page-numbers:hover {
+	-ms-filter     : "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter         : progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	-moz-opacity   : 0.8;
+	opacity        : 0.8;
+    background: #dfdfdf;
+    transition: "background" .3s;
+}
+
+.okn-pagination-container .pagination .nav-links .prev,
+.okn-pagination-container .pagination .nav-links .next {
+    background: unset;
+    width: auto;
+    border: unset;
+}
+
+.okn-pagination-container .pagination .nav-links .prev:hover,
+.okn-pagination-container .pagination .nav-links .next:hover {
+    text-decoration: underline;
+    background: unset;
+}
+*/
+.okn-pagination-container .pagination .page-numbers.next,
+.okn-pagination-container .pagination .page-numbers.prev {
+    display: none;
+}
+.okn-pagination-container .pagination .page-numbers:not(.next):not(.prev) {
+    width: unset;
+    min-width: 3.2rem;
+    height: 3.2rem;
+    padding: 0 .5rem;
+}
+
+.okn-pagination-container .pagination .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 22rem;
+    height: 4.5rem;
+    margin-top: 8.7rem;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #ededed;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: #939393;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: .3s ease;
+}
+.okn-pagination-container .pagination .page-numbers.dots,
+.okn-pagination-container .pagination .page-numbers.current {
+    cursor: default;
+}
+
+.okn-pagination-container .pagination .page-numbers:not(.dots):hover,
+.okn-pagination-container .pagination .page-numbers.current {
+    background-color: #31d7c4;
+    border-color: #31d7c4;
+    color: #fff;
+}
+/*
+@media (max-width: 768px) {
+    .okn-pagination-container { width: 100%;  }
+    .okn-pagination-container .pagination {
+        width: 100%;
+    }
+    .okn-pagination-container .pagination .nav-links .page-numbers {
+        border-radius: 0;
+    }
+}*/

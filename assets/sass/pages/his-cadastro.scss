@@ -1,0 +1,28 @@
+.heading__filtro {
+    label {
+        max-width: calc(50% - 3.6rem);
+
+        &:has(input[name="periodo-inicio"]) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+    
+            span:first-of-type {
+                width: 100%;
+            }
+    
+            input {
+                max-width: calc(50% - 3.1rem);
+            }
+        }
+    }
+}
+
+.btn.btn--green {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+main:not(:has(.dt-container)) {
+    .baixar-arquivos, hr { display: none; }
+}

@@ -1,0 +1,52 @@
+.quadro-avisos {
+    margin-top: 8.9rem;
+
+    .splide__track {
+        padding: 3rem 0;
+    }
+
+    p {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin: 1.6rem 0 5.9rem;
+        color: #7E7E7E;
+    }
+
+    &__card {
+        background-image: radial-gradient(#d1e5de 3.5px, transparent 3.5px);
+        background-size: 30px 30px;
+        background-color: #ffffff;
+        padding: 1.9rem 3rem;
+
+        max-width: 40rem;
+        width: 100%;
+        height: 30rem;
+        aspect-ratio: 4/3;
+
+        border-radius: 1rem;
+        border: .1rem solid #0083CA;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5rem 0;
+
+        figure {
+            position: absolute;
+            top: -2.3rem;
+            right: 1rem;
+            width: 3.27rem;
+            height: 5rem;
+        }
+        
+        p {
+            max-width: 33.5rem;
+            width: 100%;
+            font-size: 1.8rem;
+            font-weight: 500;
+            font-style: italic;
+            color: #005988;
+            line-height: 3rem;
+        }
+    }
+}

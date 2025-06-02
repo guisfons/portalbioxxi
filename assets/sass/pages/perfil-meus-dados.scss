@@ -1,0 +1,78 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem 9rem;
+
+    max-width: 1596px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content h1 {
+    color: #00B37C;
+}
+
+.dados-empresa, .contatos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem 9rem;
+    width: 100%;
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #0083CA;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+.dados-empresa label {
+    flex: 1 0 calc(50% - 9rem);
+}
+
+.contatos {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5rem;
+    }
+
+    &__filial {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        label {
+            flex: 1;
+        }
+
+        &--actions {
+            display: flex;
+            gap: 1rem;
+            align-self: flex-end;
+            flex: 1;
+        }
+    }
+}
+
+.inactive input {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: .05rem solid #A7A9AC;
+    padding-left: 0;
+    padding-right: 0;
+}

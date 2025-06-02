@@ -1,0 +1,43 @@
+.heading__filtro {
+    gap: 3.2rem 3.6rem;
+    align-items: flex-end;
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+label {
+    max-width: 42.5rem;
+
+    &:has(input[name="periodo-inicio"]) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 1 0 fit-content;
+        max-width: 53.2rem;
+
+        & > span:first-of-type {
+            width: 100%;
+        }
+
+        input {
+            max-width: 21.5rem;
+        }
+    }
+
+    &:has(input[name="pesquisa"]) {
+        max-width: 36rem;
+    }
+}
+
+hr {
+    margin: 0 auto;
+}
+
+table tbody tr td:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding: 1.2rem 2.9rem;
+}

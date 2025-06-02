@@ -1,0 +1,60 @@
+.content {
+    margin: 9.1rem auto;
+
+    h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #005988;
+    }
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    &__filtro {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.2rem 5rem;
+    }
+
+    span {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #7E7E7E;
+    }
+}
+
+.baixar-arquivos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.4rem auto;
+
+    &:has(.download) {
+        gap: 4.5rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #005988;
+        text-transform: uppercase;
+    }
+
+    .download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        appearance: none;
+        border: none;
+        max-width: 13.8rem;
+
+        &:first-of-type {
+            margin-left: auto;
+        }
+    }
+}

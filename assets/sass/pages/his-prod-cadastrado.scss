@@ -1,0 +1,29 @@
+.heading__filtro {
+    label {
+        max-width: calc(50% - 3.6rem);
+        flex: 1 0 100%;
+
+        &:has(input[name="cliente"]) {
+            max-width: 42.93%;
+        }
+
+        &:has(input[name="marcacao"]) {
+            max-width: 18.06%;
+        }
+
+        &:has(input[name="descartados"]) {
+            max-width: 14%;
+        }
+    }
+}
+
+.btn.btn--green {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+main:not(:has(.dt-container)) {
+    .baixar-arquivos, hr { display: none; }
+}
+
+table thead tr td { min-width: 18.7rem; }

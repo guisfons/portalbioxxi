@@ -1,0 +1,22 @@
+// SCSS de módulos
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
+.news {
+    margin-top: 5rem;
+
+    &__container {
+        display: flex;
+        gap: 3rem;
+    
+        @include max(800) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        transition: .3s ease;
+        flex: 1;
+        border: 2px solid $purple;
+    }
+}

@@ -1,0 +1,102 @@
+h2 {
+    color: #00B37C;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.quadro-avisos {
+    h2 {
+        margin-bottom: 5rem;
+    }
+}
+
+.notificacoes {
+    margin-top: 8.5rem;
+
+    & > p {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0083CA;
+        margin: 1.9rem 0 4.1rem;
+    }
+
+    &__item {
+        padding: 1.7rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: .05rem solid #A7A9AC;
+
+        &:last-of-type {
+            border-bottom: .05rem solid #A7A9AC;
+        }
+
+        & > span {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #7E7E7E;
+            width: 100%;
+        }
+
+        label {
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+
+            &::after {
+                content: 'Desativado';
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                transition: all .3s ease-in-out;
+            }
+
+            &:has(input:checked)::after {
+                content: 'Ativado';
+                color: #00B37C;
+            }
+
+            &:has(input:not(:checked)) span {
+                justify-content: flex-start;
+                border-color: #7E7E7E;
+
+                &::before {
+                    background-color: #7E7E7E;
+                }
+            }
+
+            &:has(input:checked) span {
+                justify-content: flex-end;
+            }
+
+            input {
+                display: none;
+            }
+
+            span {
+                width: 6.7rem;
+                height: 3.4rem;
+                border: 0.2rem solid #41B17E;
+                border-radius: 2rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0 0.3rem;
+                transition: all .3s ease-in-out;
+
+                &::before {
+                    content: '';
+                    width: 2.2rem;
+                    aspect-ratio: 1;
+                    background-color: #41B17E;
+                    display: block;
+                    border-radius: 50%;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}

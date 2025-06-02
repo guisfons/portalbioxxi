@@ -1,0 +1,13 @@
+.content h1 {
+    color: #00B37C;
+}
+
+.contrato {
+    max-width: 1000px;
+    width: 90%;
+
+    &__iframe {
+        aspect-ratio: 9 / 11;
+        width: 100%;
+    }
+}

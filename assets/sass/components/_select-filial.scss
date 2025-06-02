@@ -1,0 +1,42 @@
+.selecione-filial {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+
+    background: $gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    h2 {
+        color: #fff;
+        width: fit-content;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        width: 100%;
+    }
+}

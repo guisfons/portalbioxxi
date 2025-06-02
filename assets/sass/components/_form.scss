@@ -1,0 +1,226 @@
+.table {
+    &:not(:has(.dt-container)), &:has(.dt-empty) {
+        display: none;
+
+        & + hr {
+            display: none;
+        }
+    }
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    width: 100%;
+
+    &:has(input[type="radio"]) {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    span {
+        font-size: 1.8rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-left: .4rem;
+        color: #7E7E7E;
+
+        &:has(input) {
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-left: 0;
+
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+}
+
+input, select, textarea {
+    width: 100%;
+    border: .1rem solid #A7A9AC;
+    border-radius: .8rem;
+    
+    padding: 1.2rem 1.45rem;
+
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #7E7E7E;
+
+    outline: none;
+
+    &[disabled] {
+        background-color: #D9D9D9;
+    }
+}
+
+input[type=radio], input[type=checkbox] {
+    width: 4.5rem;
+    aspect-ratio: 1;
+    border-radius: .8rem;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    &:checked::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+input {
+    &[type=radio] {
+        &:checked::after {
+            content: '';
+            position: absolute;
+            width: 1rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #41B17E;
+        }
+    }
+    &[type=checkbox] {
+        &:checked::after {
+            content: url('data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2213%22%20viewBox%3D%220%200%2018%2013%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M17%201L6%2012L1%207%22%20stroke%3D%22%2341B17E%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+            width: 1.6rem;
+            height: 1.1rem;
+        }
+    }
+}
+
+textarea {
+    min-height: 9.3rem;
+    height: 9.3rem;
+    resize: none;
+}
+
+table {
+    border-radius: 3rem;
+    overflow: hidden;
+    border: none;
+    border-spacing: .1rem;
+
+    thead {
+        border-radius: 5rem;
+
+        tr {
+            background-color: #0083CA;
+            color: #fff;
+        
+            td {
+                height: fit-content;
+                padding: 1.8rem 1rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+
+    tbody {
+        background-color: #F9F9F9;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1;
+        color: #7E7E7E;
+
+        td {
+            padding: 1.2rem 1rem;
+        }
+    }
+}
+
+.dt {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &-layout-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 45dvh;
+        overflow-y: auto;
+
+        & > .dt-layout-cell {
+            width: 100%;
+        }
+
+        &:not(.dt-layout-table) {
+            label, .dt-info {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #7E7E7E;
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    &-layout-cell.dt-layout-start {
+        order: 1;
+        width: fit-content;
+    }
+
+    &-layout-cell.dt-layout-end {
+        width: fit-content;
+    }
+
+    &-paging {
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &-button {
+            display: flex;
+            padding: .5rem;
+            appearance: none;
+            border: none;
+            cursor: pointer;
+            width: 3rem;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+    
+            &.disabled {
+                display: none;
+            }
+
+            &.next, &.previous, &.last, &.first {
+                background-color: #00b37c;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            &.next, &.previous {
+                width: fit-content;
+                margin: 0 .5rem;
+            }
+            
+    
+            &.current {
+                background-color: #0083CA;
+                color: #fff;
+            }
+        }
+    }
+}

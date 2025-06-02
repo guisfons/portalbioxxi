@@ -1,0 +1,159 @@
+// 100
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Hairline.woff2');
+    src: local('Intelo Hairline'), local('Intelo-Hairline'),
+        url('../fonts/Intelo-Hairline.woff2') format('woff2'),
+        url('../fonts/Intelo-Hairline.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-HairlineItalic.woff2');
+    src: local('Intelo Hairline Italic'), local('Intelo-HairlineItalic'),
+        url('../fonts/Intelo-HairlineItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-HairlineItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+// 200
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-ThinItalic.woff2');
+    src: local('Intelo Thin Italic'), local('Intelo-ThinItalic'),
+        url('../fonts/Intelo-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-ThinItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Thin.woff2');
+    src: local('Intelo Thin'), local('Intelo-Thin'),
+        url('../fonts/Intelo-Thin.woff2') format('woff2'),
+        url('../fonts/Intelo-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+// 300
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Light.woff2');
+    src: local('Intelo Light'), local('Intelo-Light'),
+        url('../fonts/Intelo-Light.woff2') format('woff2'),
+        url('../fonts/Intelo-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-LightItalic.woff2');
+    src: local('Intelo Light Italic'), local('Intelo-LightItalic'),
+        url('../fonts/Intelo-LightItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+// 400
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Regular.woff2');
+    src: local('Intelo'), local('Intelo-Regular'),
+        url('../fonts/Intelo-Regular.woff2') format('woff2'),
+        url('../fonts/Intelo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Italic.woff2');
+    src: local('Intelo Italic'), local('Intelo-Italic'),
+        url('../fonts/Intelo-Italic.woff2') format('woff2'),
+        url('../fonts/Intelo-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+// 500
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Medium.woff2');
+    src: local('Intelo Medium'), local('Intelo-Medium'),
+        url('../fonts/Intelo-Medium.woff2') format('woff2'),
+        url('../fonts/Intelo-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-MediumItalic.woff2');
+    src: local('Intelo Medium Italic'), local('Intelo-MediumItalic'),
+        url('../fonts/Intelo-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+// 600
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-SemiBold.woff2');
+    src: local('Intelo Semi Bold'), local('Intelo-SemiBold'),
+        url('../fonts/Intelo-SemiBold.woff2') format('woff2'),
+        url('../fonts/Intelo-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-SemiBoldItalic.woff2');
+    src: local('Intelo Semi Bold Italic'), local('Intelo-SemiBoldItalic'),
+        url('../fonts/Intelo-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+// 700
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-Bold.woff2');
+    src: local('Intelo Bold'), local('Intelo-Bold'),
+        url('../fonts/Intelo-Bold.woff2') format('woff2'),
+        url('../fonts/Intelo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-BoldItalic.woff2');
+    src: local('Intelo Bold Italic'), local('Intelo-BoldItalic'),
+        url('../fonts/Intelo-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+// 800
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-ExtraBold.woff2');
+    src: local('Intelo Extra Bold'), local('Intelo-ExtraBold'),
+        url('../fonts/Intelo-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Intelo-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Intelo';
+    src: url('../fonts/Intelo-ExtraBoldItalic.woff2');
+    src: local('Intelo Extra Bold Italic'), local('Intelo-ExtraBoldItalic'),
+        url('../fonts/Intelo-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Intelo-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}

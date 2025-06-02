@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    
+    margin-top: 15rem;
+
+    border-top: .05rem solid #A7A9AC;
+    padding: 4.2rem 0 6.8rem;
+
+    &__contato, &__redes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.8rem 2.9rem;
+    
+        span {
+            width: 100%;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #0083CA;
+        }
+    }
+
+    &__contato a {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+        font-size: 1.6rem;
+        color: #7E7E7E;
+    }
+
+    &__whatsapp {
+        background-color: #41B17E;
+        border-radius: 1rem;
+        padding: 1.9rem 2.9rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    
+        span {
+            max-width: 29.1rem;
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+}

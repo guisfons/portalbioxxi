@@ -1,0 +1,60 @@
+.heading {
+    &__filtro {
+        display: none;
+        transition: all .3s ease-in-out;
+
+        align-items: flex-end;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: .1rem;
+        max-width: 93.2rem;
+        width: 100%;
+    }
+
+    &__tab {
+        background-color: #C8C8C8;
+        flex: 1;
+        border-radius: 2rem 2rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        font-weight: 600 !important;
+        color: #fff !important;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &--active {
+            background-color: #0083CA;
+        }
+    }
+}
+
+label {
+    &:not(:has(input[type="date"])) {
+        width: 100%;
+        max-width: 32.5rem;
+    }
+
+    &:has(input[type="date"]) {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 53.3rem;
+
+        span:first-of-type {
+            width: 100%;
+        }
+
+        input {
+            max-width: 21.5rem;
+        }
+    }
+}

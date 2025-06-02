@@ -1,0 +1,23 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100vw;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: $gradient;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s ease-in-out;
+
+    &--hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,185 @@
+.heading__filtro {
+    label {
+        max-width: calc(50% - 3.6rem);
+
+        &:has(select[name="setores"]) {
+            max-width: 68.7rem;
+        }
+
+        &:has(select[name="clientes"]) {
+            max-width: 50rem;
+        }
+
+        &:has(input[name="nome"]) {
+            max-width: 45rem;
+        }
+
+        &:has(input[name="etiqueta"]) {
+            max-width: 55.2rem;
+        }
+
+        &:has(select[name="situacao"]) {
+            max-width: 50rem;
+        }
+
+        &:has(input[name="periodo-inicio"]) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            max-width: 53.2rem;
+    
+            span:first-of-type {
+                width: 100%;
+            }
+    
+            input {
+                max-width: 21.5rem;
+            }
+        }
+    }
+}
+
+.btn.btn--green {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.cadastro-produto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.3rem auto;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #005988;
+}
+
+hr {
+    margin: 0 auto;
+}
+
+main:not(:has(.dt-container)) {
+    .baixar-arquivos, hr:last-of-type { display: none; }
+}
+
+.modal {
+    label {
+        &:has(input[name="nome-produto"]), &:has(input[name="sub_item"]) {
+            max-width: 80.1rem;
+            min-width: 70%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 0;
+            flex: 1;
+
+            span {
+                width: 100%;
+            }
+
+            input {
+                max-width: calc(100% - 24.9rem);
+            }
+
+            button {
+                margin: 0 0 0 -2rem;
+                height: 4.7rem;
+                padding: 1.15rem 1.5rem;
+            }
+        }
+
+        &:has(input[name="sub_item"]) {
+            max-width: 100%;
+        }
+
+        &:has(input[name="anvisa"]) {
+            max-width: 32rem;
+            min-width: 20%;
+            flex: 1;
+        }
+        
+        &:has(select[name="criticidade"]) {
+            max-width: 27rem;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+            select {
+                max-width: 23rem;
+            }
+        }
+
+        &:has(input[name="validade"]) {
+            max-width: 23rem;
+        }
+
+        &:has(input[type=checkbox]) {
+            width: fit-content;
+            align-self: flex-end;
+        }
+    }
+
+    &[data-model="item-conjunto"] {
+        label:has(input[name="n_anvisa"]) {
+            width: fit-content;
+        }
+    }
+
+    &[data-model="produtos"] {
+        z-index: 9;
+    }
+
+    &[data-model="termos-condicoes"], &[data-model="assinatura"] {
+        .modal {
+            &__content {
+                padding: 4rem 5rem;
+                background-color: #F9F9F9;
+    
+                font-size: 1.8rem;
+                line-height: 3rem;
+                color: #7E7E7E;
+    
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+    
+                strong {
+                    color: #41B17E;
+                }
+    
+                label:has(input[type=checkbox]) {
+                    flex-direction: row;
+                    align-self: flex-start;
+                    align-items: center;
+                }
+            }
+
+            &__actions {
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+
+                .btn {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .table {
+        td {
+            span {
+                display: inline-flex;
+                cursor: pointer;
+
+                &:not(:last-of-type) {
+                    margin-right: 1.8rem;
+                }
+            }
+        }
+    }
+}

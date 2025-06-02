@@ -1,0 +1,40 @@
+.heading__filtro {
+    label {
+        max-width: 36.4rem;
+        flex: 1 0 calc(33.33% - 5rem);
+
+        &:has(select[name="clientes"]),&:has(input[name="artigo"]) {
+            max-width: 55.2rem;
+        }
+
+        &:has(input[name="periodo-inicio"]) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            max-width: 53.2rem;
+    
+            span:first-of-type {
+                width: 100%;
+            }
+    
+            input {
+                max-width: 21.5rem;
+            }
+        }
+    }
+}
+
+.btn.btn--green {
+    margin-top: auto;
+}
+
+[data-action="modal"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main:not(:has(.dt-container)) {
+    .baixar-arquivos, hr { display: none; }
+}

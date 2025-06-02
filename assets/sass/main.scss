@@ -1,0 +1,19 @@
+// SCSS global
+
+@import 'abstracts/variables';
+@import 'abstracts/fonts';
+@import 'abstracts/utilities';
+
+@import 'base/reset';
+
+@import 'components/button';
+@import 'components/form';
+@import 'components/slider';
+@import 'components/modal';
+@import 'components/quadro-avisos'; 
+@import 'components/select-filial';
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/loader';
+@import 'layout/content';

@@ -1,0 +1,41 @@
+.heading__filtro {
+    label {
+        max-width: calc(50% - 3.6rem);
+
+        &:has(select[name="clientes"]), &:has(select[name="setores"]) {
+            max-width: 68.7rem;
+        }
+
+        &:has(input[name="num-memorando"]) {
+            max-width: 49.4rem;
+        }
+
+        &:has(input[name="periodo-inicio"]) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            max-width: 53.2rem;
+    
+            span:first-of-type {
+                width: 100%;
+            }
+    
+            input {
+                max-width: 21.5rem;
+            }
+        }
+    }
+}
+
+.btn.btn--green {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+main:not(:has(.dt-container)) {
+    .baixar-arquivos, hr { display: none; }
+}
+
+.table span {
+    cursor: pointer;
+}

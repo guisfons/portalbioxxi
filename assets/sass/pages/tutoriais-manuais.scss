@@ -1,0 +1,61 @@
+.heading__filtro {
+    label:not(:has(input[name="pesquisa"])) {
+        max-width: 49.4rem;
+    }
+}
+
+.tutoriais-manuais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7.7rem 7.9rem;
+
+    &__video {
+        padding: 2.4rem;
+        border-radius: 1rem;
+        border: .1rem solid #0083CA;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        max-width: 32.5rem;
+        width: 100%;
+    
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+    
+            span {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: #7E7E7E;
+            }
+        }
+    
+        & > figure {
+            max-width: 27.8rem;
+            width: 100%;
+    
+            aspect-ratio: 278/184;
+    
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        & > span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #41B17E;
+            text-transform: uppercase;
+        }
+    
+        & > h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #005988;
+        }
+    }
+}
