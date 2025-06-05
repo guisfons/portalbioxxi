@@ -2,7 +2,6 @@ jQuery(document).ready(function ($) {
     const nomeFilial = localStorage.getItem('nomeFilial');
     const urlParams = new URLSearchParams(window.location.search);
     const idFichaUrl = urlParams.get('id_ficha');
-    console.log(idFichaUrl);
     
     if (idFichaUrl) {
         detalhesFicha(idFichaUrl)
@@ -63,10 +62,19 @@ jQuery(document).ready(function ($) {
         excluirProd(btn);
     })
 
-    $(document).on('click', '[data-acao="editar"]', '[data-acao="add"]', function () {
+    $(document).on('click', '[data-acao="editar"], [data-acao="add"]', function () {
         const btn = $(this);
         btn.attr('disabled', true);
-        const idConjunto = btn.closest('tr').data('produto-id');
+        let idConjunto
+
+        if(btn.data('acao') == 'editar') {
+            idConjunto = btn.closest('tr').data('produto-id');
+        }
+
+        if(btn.data('acao') == 'add') {
+            idConjunto = btn.closest('tr').data('conjunto');
+        }
+
         getSubItems(idConjunto, btn)
     })
 
@@ -117,6 +125,10 @@ jQuery(document).ready(function ($) {
 
     $('.modal[data-model="cadastro-produto"] .modal__close').on('click', function () {
         $(this).closest('.modal').find('input, select, textarea').val('');
+    })
+
+    $('.modal[data-model="item-conjunto"] .modal__close').on('click', function () {
+        $('.modal[data-model="cadastro-produto"]').addClass('modal--active');
     })
 });
 
@@ -263,8 +275,6 @@ async function checkProduto(btn) {
 
         btn.attr('disabled', false);
         const data = await response.json();
-        console.log(data);
-        
     } catch (error) {
         console.error("Erro ao obter itens:", error);
         alert("Erro ao obter itens: " + error.message);
@@ -593,6 +603,7 @@ async function addSubItem(btn) {
         `);
 
         tabela.DataTable(tableConfig);
+        btn.attr('disabled', false);
         
     } catch (error) {
         console.error("Erro ao adicionar produto:", error);
@@ -716,8 +727,6 @@ async function aprovarFicha(btn, idFicha, assinatura) {
 
         const data = await response.json();
 
-        console.log(data);
-        
         btn.attr('disabled', true);
         $('input, textarea, select').val('');
         modalSuccess('Produto enviado com sucesso')

@@ -221,7 +221,7 @@ function modalSuccess(texto) {
     $('body').append(`
         <div class="modal modal--success modal--active">
             <div class="modal__heading">
-                <button type="button" class="modal__close"><img src="/wp-content/themes/portal_bioxxi/assets/img/icons/close.svg'"></button>
+                <button type="button" class="modal__close"><img src="/wp-content/themes/portalbioxxi/assets/img/icons/close.svg'"></button>
             </div>
             <div class="modal__content">${texto}</div>
             <figure><svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M121.354 62.5001C121.354 68.2293 113.541 72.9168 111.979 78.646C110.416 84.3751 113.541 92.7085 110.416 96.8751C106.771 101.563 97.9163 101.042 93.2288 104.167C88.5413 107.292 86.458 116.146 80.7288 118.229C75.5205 119.792 68.7497 114.063 62.4997 114.063C56.7705 114.063 49.9997 119.792 44.2705 118.229C38.5413 116.667 36.458 107.813 31.7705 104.167C27.083 100.521 18.2288 101.563 14.583 96.8751C11.458 92.1876 14.583 83.8543 13.0205 78.646C11.458 73.4376 3.64551 68.7501 3.64551 62.5001C3.64551 56.771 11.458 52.0835 13.0205 46.3543C14.583 40.6251 11.458 32.2918 14.583 28.1251C18.7497 23.4376 27.6038 23.9585 32.2913 20.8335C36.9788 17.7085 39.0622 8.85431 44.7913 6.77098C49.9997 5.20848 56.7705 10.9376 63.0205 10.9376C68.7497 10.9376 75.5205 5.20848 81.2497 6.77098C86.9788 8.33348 89.0622 17.1876 93.7497 20.8335C98.4372 24.4793 107.291 23.4376 110.937 28.1251C114.062 32.8126 110.937 41.146 112.5 46.3543C113.541 52.0835 121.354 56.771 121.354 62.5001Z" stroke="#41B17E" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M41.1455 63.0208L55.208 76.5625L83.8538 48.4375" stroke="#41B17E" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></figure>
@@ -515,7 +515,7 @@ window.listarPagamento = async function listarPagamento() {
             novoSlide.innerHTML = `
                 <div class="quadro-avisos__card splide__slide">
                     <figure>
-                        <img src="/wp-content/themes/portal_bioxxi/assets/img/icons/clip.svg" alt="Aviso">
+                        <img src="../wp-content/themes/portalbioxxi/assets/img/icons/clip.svg" alt="Aviso">
                     </figure>
                     <p>Há um boleto no valor de R$ ${valorFormatado} vencido em ${dataVencimentoFormatada}. Acesse a página de Boletos e Faturas para pagar o boleto ou acesse <a href="/financeiro/formas-de-pagamento/" target="_self" title="Boletos e Faturas" style="text-decoration: underline">clicando aqui</a>.</p>
                 </div>

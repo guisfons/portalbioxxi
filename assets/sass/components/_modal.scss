@@ -47,6 +47,7 @@ body:has(.modal--active)::before {
         font-weight: 700;
         text-transform: uppercase;
         color: #005988;
+        max-width: calc(95% - 3.2rem);
     }
 
     &__close {
