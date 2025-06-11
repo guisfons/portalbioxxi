@@ -33,6 +33,7 @@
                 visibility: visible;
                 padding-top: 10rem;
                 overflow-y: auto;
+                pointer-events: initial;
             }
 
             &__wrapper {
@@ -280,6 +281,7 @@
             opacity: 0;
             visibility: hidden;
             transition: .3s ease-in-out;
+            pointer-events: none;
         }
     }
 
