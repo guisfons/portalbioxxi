@@ -14,7 +14,7 @@
 		<div class="quadro-avisos__slider splide">
 			<div class="splide__track">
 				<div class="splide__list">
-					<div class="quadro-avisos__card splide__slide">
+					<!-- <div class="quadro-avisos__card splide__slide">
 						<figure><img src="<?= esc_url(get_template_directory_uri() . '/assets/img/icons/clip.svg'); ?>"></figure>
 						<p>O portal esta em desenvolvimento e pode apresentar erros.</p>
 					</div>
@@ -33,7 +33,7 @@
 					<div class="quadro-avisos__card splide__slide">
 						<figure><img src="<?= esc_url(get_template_directory_uri() . '/assets/img/icons/clip.svg'); ?>"></figure>
 						<p>Seu boleto venceu. Acesse no menu a opção Pagamentos no seu perfil e pague agora mesmo.</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

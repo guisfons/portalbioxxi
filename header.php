@@ -56,6 +56,13 @@
 							</div>
 						</div>
 					</div>
+					<label class="header__btn">
+						<span></span>
+						<span></span>
+						<span></span>
+
+						<input type="checkbox" class="header__checkbox" id="header__checkbox">
+					</label>
 					<button class="header__sair">
 						<span>SAIR</span>
 						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/icons/logout.svg'); ?>" alt="Sair">
@@ -65,6 +72,37 @@
 
 			<div class="header__menu">
 				<div class="header__wrapper">
+					<div class="header__wrapper--mobile">
+						<div class="header__notifications">
+							<button class="header__bell" data-total><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/img/icons/bell.svg'); ?>" alt="Notificações"></button>
+		
+							<div class="header__notification">
+								<div class="header__notification-heading">
+									<span>Avisos</span>
+									<span><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/icons/gear.svg'); ?>" alt="Configurações"></span>
+								</div>
+								<div class="header__notification-body">
+									<div class="header__notification-item">
+										<span class="header__notification-item-title">FICHA DE CADASTRO</span>
+										<span class="header__notification-item-date">29/11 às 15h45</span>
+										<p>Curabitur porttitor sapien dui, eu eleifend felis pellentesque ac Vestibulum eleifend lorem ac est luctus pretium.</p>
+									</div>
+									<div class="header__notification-item">
+										<span class="header__notification-item-title">MEMORANDO DE COLETA</span>
+										<span class="header__notification-item-date">29/11 às 12h01</span>
+										<p>In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+									</div>
+									<button class="header__notification-btn">Exibir tudo</button>
+								</div>
+							</div>
+						</div>
+
+						<button class="header__sair">
+							<span>SAIR</span>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/icons/logout.svg'); ?>" alt="Sair">
+						</button>
+					</div>
+
 					<?php
 						wp_nav_menu(array(
 							'theme_location' => 'header-menu',
@@ -74,8 +112,6 @@
 							'menu_class'     => 'header__nav-menu',
 						));
 					?>
-
-					<a href=""></a>
 				</div>
 			</div>
 		</header>

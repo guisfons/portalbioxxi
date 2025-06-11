@@ -8,6 +8,11 @@
     border-top: .05rem solid #A7A9AC;
     padding: 4.2rem 0 6.8rem;
 
+    @include max (600) {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
     &__contato, &__redes {
         display: flex;
         flex-wrap: wrap;

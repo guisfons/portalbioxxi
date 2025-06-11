@@ -58,6 +58,12 @@
     border: none;
 
     cursor: pointer;
+    
+    &:has(> span) {
+        @include max (1024) {
+            position: unset;
+        }
+    }
 
     &:not([data-text=""])::before, &:is([data-text=""]) span {
         position: absolute;
@@ -84,6 +90,18 @@
 
     &:is([data-text=""]) span {
         min-width: 60.9rem;
+
+        @include max (1024) {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100% !important;
+            max-width: 100%;
+            height: fit-content;
+            margin: 0;
+            z-index: 9999;
+        }
     }
 
     ul {
@@ -100,5 +118,4 @@
             visibility: visible;
         }
     }
-
 }

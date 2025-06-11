@@ -1,3 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -8,8 +11,16 @@ main {
     margin: 0 auto;
 }
 
-.content h1 {
-    color: #00B37C;
+.content {
+    .heading {
+        @include max (1024) {
+            margin: 5rem auto 0;
+        }
+    }
+
+    h1 {
+        color: #00B37C;
+    }
 }
 
 .dados-empresa, .contatos {
@@ -54,6 +65,10 @@ main {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+
+        @include max (1024) {
+            flex-direction: column;
+        }
 
         label {
             flex: 1;

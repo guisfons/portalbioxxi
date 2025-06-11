@@ -384,6 +384,7 @@ async function selecionarFilial() {
     if(filiais.length > 2) {
         $('.selecione-filial').addClass('selecione-filial--active');
         $('.header__top .header__wrapper .header__notifications').before('<select class="header__filiais"></select>')
+        $('.header__wrapper--mobile .header__notifications').before('<select class="header__filiais"></select>')
 
         filiais.forEach(filial => {
             $('.selecione-filial__container select').append(`<option value="${filial.idfilial}">${filial.filial}</option>`);
@@ -415,9 +416,13 @@ function headerFiliais() {
     const filiais = JSON.parse(localStorage.getItem('filiais'));
     
     if(filiais.length > 2) {
-        if(!$('.header__filiais')) {
-            $('.header__top .header__wrapper .header__notifications').before('<select class="header__filiais"></select>')
-        };
+        if ($('.header__filiais').length === 0) {
+            $('.header__top .header__wrapper .header__notifications')
+                .before('<select class="header__filiais"></select>');
+
+            $('.header__wrapper--mobile .header__notifications')
+                .before('<select class="header__filiais"></select>');
+        }
 
         filiais.forEach(filial => {
             if(filial.idfilial === localStorage.getItem('idFilial')) {
@@ -503,7 +508,7 @@ window.listarPagamento = async function listarPagamento() {
         if($('.quadro-avisos__slider').length > 0) {
             if (!window.quadroAvisosSplide) {
                 window.quadroAvisosSplide = new Splide('.quadro-avisos__slider', {
-                    type: 'loop',
+                    type: 'fade',
                     perPage: 1,
                     autoplay: true,
                 }).mount();
@@ -511,11 +516,12 @@ window.listarPagamento = async function listarPagamento() {
         
             // Cria um novo slide
             const novoSlide = document.createElement('li');
+            const homeUrl = window.location.protocol + '//' + window.location.host + '/';
             novoSlide.classList.add('splide__slide');
             novoSlide.innerHTML = `
                 <div class="quadro-avisos__card splide__slide">
                     <figure>
-                        <img src="../wp-content/themes/portalbioxxi/assets/img/icons/clip.svg" alt="Aviso">
+                        <img src="${homeUrl}/wp-content/themes/portalbioxxi/assets/img/icons/clip.svg" alt="Aviso">
                     </figure>
                     <p>Há um boleto no valor de R$ ${valorFormatado} vencido em ${dataVencimentoFormatada}. Acesse a página de Boletos e Faturas para pagar o boleto ou acesse <a href="/financeiro/formas-de-pagamento/" target="_self" title="Boletos e Faturas" style="text-decoration: underline">clicando aqui</a>.</p>
                 </div>

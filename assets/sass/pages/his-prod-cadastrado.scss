@@ -1,3 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
 .heading__filtro {
     label {
         max-width: calc(50% - 3.6rem);
@@ -9,10 +12,34 @@
 
         &:has(input[name="marcacao"]) {
             max-width: 18.06%;
+
+            @include max (1280) {
+                max-width: 50%;
+            }
+
+            @include max (600) {
+                max-width: 100%;
+            }
         }
 
         &:has(input[name="descartados"]) {
             max-width: 14%;
+
+            @include max (1280) {
+                max-width: 30%;
+
+                span {
+                    width: 100%;
+
+                    &:has(input) {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            @include max (600) {
+                max-width: 100%;
+            }
         }
     }
 }

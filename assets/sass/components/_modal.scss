@@ -31,6 +31,10 @@ body:has(.modal--active)::before {
 
     z-index: 2;
 
+    @include max (1024) {
+        padding: 3rem;
+    }
+
     &--active {
         opacity: 1;
         visibility: visible;
@@ -73,6 +77,10 @@ body:has(.modal--active)::before {
         padding: 1.3rem 0 2.5rem;
         border: .05rem solid #A7A9AC;
         border-width: .05rem 0;
+
+        @include max (1024) {
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -136,6 +144,40 @@ body:has(.modal--active)::before {
         td {
             span {
                 color: #fff;
+
+                @include max (900) {
+                    &[data-acao], &[data-action] {
+                        margin: 1rem;       
+                    }
+                }
+            }
+        }
+    }
+
+    @include max (1024) {
+        label {
+            max-width: 100% !important;
+            width: 100% !important;
+
+            & > span {
+                width: 100%;
+            }
+
+            &:has(.help) select {
+                max-width: calc(100% - 2.39rem - 1.5rem) !important;
+            }
+
+            &:has(.btn--anvisa) {
+                flex-direction: column !important;
+
+                input {
+                    max-width: 100% !important;
+                }
+
+                .btn--anvisa {
+                    margin: 0 !important;
+                    width: 100%;
+                }
             }
         }
     }

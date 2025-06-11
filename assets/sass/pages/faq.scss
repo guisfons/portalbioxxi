@@ -1,3 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
 .faq {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +10,10 @@
     visibility: visible;
     max-height: initial;
     transition: all .3s ease-in-out;
+
+    @include max (900) {
+        justify-content: center;
+    }
 
     &--hide {
         opacity: 0;

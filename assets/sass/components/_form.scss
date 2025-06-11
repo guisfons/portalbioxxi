@@ -8,12 +8,26 @@
     }
 }
 
-label {
+label:not(.header__btn) {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
     width: 100%;
+
+    @include max (1024) {
+        max-width: 100% !important;
+        width: 100% !important;
+
+        input[name=periodo-inicio],
+        input[name=periodo-fim] {
+            max-width: 100% !important;
+        }
+
+        & > span {
+            width: 100%;
+        }
+    }
 
     &:has(input[type="radio"]) {
         flex-direction: row;
@@ -36,6 +50,25 @@ label {
             display: flex;
             align-items: center;
             gap: .5rem;
+        }
+    }
+}
+
+.heading__filtro {
+    label {
+        @include max (900) {
+            max-width: 100% !important;
+            width: 100% !important;
+            flex: 1 1 100% !important;
+
+            input[name=periodo-inicio],
+            input[name=periodo-fim] {
+                max-width: 100% !important;
+            }
+
+            & > span {
+                width: 100%;
+            }
         }
     }
 }
