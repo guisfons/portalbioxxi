@@ -6,7 +6,7 @@ function contrato() {
     const accessToken = localStorage.getItem('access_token');
     const coligadaId = localStorage.getItem('coligadaId');
     const userId = localStorage.getItem('user_id');
-    const apiURL = `https://cmexxfab.com.br/api-homol/api/certidao/cliente/2434`;
+    const apiURL = `https://cmexxfab.com.br/api-homol/api/certidao/cliente/${userId}`;
 
     if (!accessToken || !coligadaId) {
         console.error('Erro: Token de acesso ou ID da coligada não encontrado.');

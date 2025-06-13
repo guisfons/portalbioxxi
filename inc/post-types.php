@@ -5,7 +5,6 @@
 function ks_register_post_types(){
 
     $def_posttype_args = array(
-
         'labels'             => array(),
         'description'        => '',
         'public'             => true,
@@ -18,9 +17,8 @@ function ks_register_post_types(){
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 4,
-        'supports'           => array('title', 'thumbnail', 'editor', 'author', 'excerpt', 'page-attributes' ),
+        'supports'           => array('title', 'thumbnail', 'editor', 'author', 'excerpt', 'page-attributes'),
         'show_in_rest'		 => true
-
     );
 
     $def_taxonomy_args = array(
@@ -35,65 +33,49 @@ function ks_register_post_types(){
     );
 
     $posttypes = array(
-
-        // 'empresas' => array(
-
-        //     'labels' => array(
-        //         'name'               => __('Empresas'),
-        //         'singular_name'      => __('Empresa'),
-        //         'menu_name'          => __('Empresas'),
-        //         'name_admin_bar'     => __('Empresas'),
-        //         'add_new'            => __('Nova Empresa'),
-        //         'add_new_item'       => __('Nova Empresa'),
-        //         'new_item'           => __('Nova Empresa'),
-        //         'edit_item'          => __('Editar Empresa'),
-        //         'view_item'          => __('Ver Empresa'),
-        //         'all_items'          => __('Empresas'),
-        //         'search_items'       => __('Procurar por Empresas'),
-        //         'parent_item_colon'  => __('Empresas pai:'),
-        //         'not_found'          => __('Nenhum Empresa encontrado.'),
-        //         'not_found_in_trash' => __('Nenhum Empresa encontrado na lixeira.')
-        //     ),
-        //     'menu_icon' => 'dashicons-store',
-        //     'description' => __('Empresas'),
-        //     'rest_base' =>'custom/empresas',
-        //     'has_archive' => 'biblioteca/empresas',
-        //     'rewrite'     => [
-        //         'slug' => 'empresas',
-        //     ],
-        //     'supports'    => array('title', 'thumbnail'),
-        //     'show_in_rest' => false,  // @info inherited from old version
-        // ),
-
-        // 'eventos' => array(
-
-        //     'labels' => array(
-        //         'name'               => __('Eventos'),
-        //         'singular_name'      => __('Evento'),
-        //         'menu_name'          => __('Eventos'),
-        //         'name_admin_bar'     => __('Eventos'),
-        //         'add_new'            => __('Novo Evento'),
-        //         'add_new_item'       => __('Novo Evento'),
-        //         'new_item'           => __('Novo Evento'),
-        //         'edit_item'          => __('Editar Evento'),
-        //         'view_item'          => __('Ver Evento'),
-        //         'all_items'          => __('Eventos'),
-        //         'search_items'       => __('Procurar por Eventos'),
-        //         'parent_item_colon'  => __('Eventos pai:'),
-        //         'not_found'          => __('Nenhum Evento encontrado.'),
-        //         'not_found_in_trash' => __('Nenhum Evento encontrado na lixeira.')
-        //     ),
-        //     'menu_icon' => 'dashicons-admin-site-alt',
-        //     'description' => __('Eventos'),
-        //     'rest_base' =>'custom/eventos',
-        //     'has_archive' => 'biblioteca/eventos',
-        //     'rewrite'     => [
-        //         'slug' => 'eventos',
-        //     ],
-        //     'supports'    => array('title', 'editor', 'thumbnail', 'excerpt'),
-        //     'show_in_rest' => false,  // @info inherited from old version
-        // ),
-
+        'tutoriais_manuais' => array(
+            'labels' => array(
+                'name'               => __('Tutoriais e Manuais'),
+                'singular_name'      => __('Tutorial ou Manual'),
+                'menu_name'          => __('Tutoriais e Manuais'),
+                'name_admin_bar'     => __('Tutoriais e Manuais'),
+                'add_new'            => __('Novo'),
+                'add_new_item'       => __('Adicionar Novo'),
+                'new_item'           => __('Novo Tutorial ou Manual'),
+                'edit_item'          => __('Editar'),
+                'view_item'          => __('Ver'),
+                'all_items'          => __('Todos'),
+                'search_items'       => __('Procurar'),
+                'parent_item_colon'  => __('Pai:'),
+                'not_found'          => __('Nenhum encontrado.'),
+                'not_found_in_trash' => __('Nenhum na lixeira.')
+            ),
+            'menu_icon'    => 'dashicons-media-document',
+            'description'  => __('Tutoriais e Manuais com categorias.'),
+            'rest_base'    => 'custom/tutoriais',
+            'has_archive'  => 'biblioteca/tutoriais',
+            'rewrite'      => array('slug' => 'tutoriais'),
+            'supports'     => array('title', 'thumbnail'),
+            'show_in_rest' => true,
+            'taxonomy'     => array( // <- Aqui entra a definição completa
+                'categoria_tutoriais' => array(
+                    'labels' => array(
+                        'name'              => __('Categorias de Tutoriais'),
+                        'singular_name'     => __('Categoria de Tutorial'),
+                        'search_items'      => __('Buscar Categorias'),
+                        'all_items'         => __('Todas as Categorias'),
+                        'parent_item'       => __('Categoria Pai'),
+                        'parent_item_colon' => __('Categoria Pai:'),
+                        'edit_item'         => __('Editar Categoria'),
+                        'update_item'       => __('Atualizar Categoria'),
+                        'add_new_item'      => __('Adicionar Nova Categoria'),
+                        'new_item_name'     => __('Nome da Nova Categoria'),
+                        'menu_name'         => __('Categorias'),
+                    ),
+                    'rewrite' => array('slug' => 'categoria-tutoriais')
+                )
+            )
+        )
     );
 
     foreach ($posttypes as $posttype => $options) {
@@ -119,7 +101,6 @@ function ks_register_post_types(){
         register_post_type($posttype, $args);
 
     }
-
 }
 
 add_action('init', 'ks_register_post_types', 10 );

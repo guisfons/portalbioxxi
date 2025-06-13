@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
             window.location.href = '/login'
         } else {
             // console.log('Usuário autenticado. Carregando vídeos...')
-            await getVideos()
+            // await getVideos()
         }
     })()
 
